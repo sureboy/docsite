@@ -18,9 +18,7 @@ const { intersect, subtract, union } = require('@jscad/modeling').booleans
 
 ### modeling/booleans.intersect(...geometries)
 
-Return a new geometry representing space in both the first geometry and
-all subsequent geometries.
-The given geometries should be of the same type, either geom2 or geom3.
+返回一个新的几何图形，表示同时处于第一个几何图形与所有后续几何图形中的空间。传入的几何图形应属于同一类型，即 geom2 或 geom3。
 
 **Kind**: static method of [`modeling/booleans`]  
 **Returns**: `geom2` ⎮ `geom3` - a new geometry  
