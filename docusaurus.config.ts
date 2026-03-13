@@ -41,12 +41,13 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
+          routeBasePath:"/",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           //editUrl:
           //  'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        blog: {
+        blog: false,/*{
           showReadingTime: true,
           feedOptions: {
             type: ['rss', 'atom'],
@@ -60,7 +61,7 @@ const config: Config = {
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
-        },
+        },*/
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -87,11 +88,10 @@ const config: Config = {
           position: 'left',
           label: 'Docs',
         },
-        {to: '/blog', label: 'Blog', position: 'left'}, 
         {
           href: 'https://solidjscad.com/',
           label: 'Start',
-          position: 'right',
+          position: 'left',
         },
       ],
     },

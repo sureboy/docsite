@@ -25,6 +25,7 @@ function HomepageHeader() {
 
 export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
+  console.log("test")
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
