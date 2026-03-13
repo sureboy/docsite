@@ -1,9 +1,8 @@
 
 ## modeling/booleans
 
-All shapes (primitives or the results of operations) can be passed to boolean functions
-to perform logical operations, e.g. remove a hole from a board.
-In all cases, the function returns the results, and never changes the original shapes.
+所有形状（基本图元或运算结果）均可传入布尔函数以执行逻辑运算，例如从板材上挖去一个孔。在任何情况下，该函数仅返回运算结果，绝不会修改原始形状。
+
 
 **Example**  
 ```js
