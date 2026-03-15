@@ -1,7 +1,7 @@
 
 ## modeling/utils
 
-Utility functions of various sorts, including conversions from different angular measures.
+各类实用工具函数，包括不同角度度量单位之间的转换。
 
 **Example**  
 ```js
@@ -43,8 +43,7 @@ Convert the given angle (degrees) to radians.
 
 ### modeling/utils.flatten(arr)
 
-Flatten the given list of arguments into a single flat array.
-The arguments can be composed of multiple depths of objects and arrays.
+将传入的参数列表扁平化为一个单层数组。这些参数可由多层嵌套的对象和数组构成。
 
 **Kind**: static method of [`modeling/utils`]  
 **Returns**: `Array` - a flat list of arguments  

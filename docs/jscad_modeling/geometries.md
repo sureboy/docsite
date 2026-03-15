@@ -1,12 +1,12 @@
 ## Modules
 Module | Description
 ------ | -----------
-[modeling/geometries/geom2] | Represents a 2D geometry consisting of a list of sides.
-[modeling/geometries/geom3] | Represents a 3D geometry consisting of a list of polygons.
-[modeling/geometries] | Geometries are objects that represent the contents of primitives or the results of operations. Note: Geometries are considered immutable, so never change the contents directly.
-[modeling/geometries/path2] | Represents a 2D geometry consisting of a list of ordered points.
-[modeling/geometries/poly2] | Represents a 2D polygon consisting of a list of ordered vertices.
-[modeling/geometries/poly3] | Represents a convex 3D polygon consisting of a list of ordered vertices.
+[modeling/geometries/geom2] | 表示一个由边列表构成的二维几何体。
+[modeling/geometries/geom3] | 表示一个由多边形列表构成的三维几何体。
+[modeling/geometries] | 几何体是表示基本图元内容或运算结果的对象。注意：几何体被视为不可变对象，因此请勿直接修改其内容。
+[modeling/geometries/path2] | 表示一个由有序点列表构成的二维几何体。
+[modeling/geometries/poly2] | 表示一个由有序顶点列表构成的二维多边形。
+[modeling/geometries/poly3] | 表示一个由有序顶点列表构成的凸三维多边形。
 
 ## Typedefs
 

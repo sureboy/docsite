@@ -1,20 +1,19 @@
 ## Modules
 Module | Description
 ------ | -----------
-[modeling/extrusions] | All 2D shapes (primitives or the results of operations) can be extruded in various ways. In all cases, the function returns the results, and never changes the original shapes.
-[modeling/extrusions/slice] | Represents a 3D geometry consisting of a list of edges.
+[modeling/extrusions] | 所有二维图形（基本图形或运算结果）都可以通过多种方式进行拉伸（挤出）。在所有情况下，函数均返回运算结果，不会修改原始图形。
+[modeling/extrusions/slice] | 表示一个由边列表构成的三维几何体。
 
 ## Typedefs
 
 Name | Description
 ------ | -----------
-[slice] | Represents a 3D geometry consisting of a list of edges.
+[slice] | 表示一个由边列表组成的三维几何体。
 
 
 ## modeling/extrusions
 
-All 2D shapes (primitives or the results of operations) can be extruded in various ways.
-In all cases, the function returns the results, and never changes the original shapes.
+所有二维图形（基本图形或运算结果）均可通过多种方式进行拉伸（挤出）。在任何情况下，该函数均返回运算结果，且不会修改原始图形。
 
 **Example**  
 ```js
@@ -32,7 +31,7 @@ const { extrudeHelical, extrudeLinear, extrudeRectangular, extrudeRotate, projec
 
 ### modeling/extrusions.extrudeFromSlices(options, base)
 
-Extrude a solid from the slices as returned by the callback function.
+根据回调函数返回的切片，拉伸生成一个实体。
 
 **Kind**: static method of [`modeling/extrusions`]  
 **Returns**: `geom3` - the extruded shape  

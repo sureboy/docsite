@@ -1,8 +1,7 @@
 
 ## modeling/transforms
 
-All shapes (primitives or the results of operations) can be transformed, such as scaled or rotated.
-In all cases, the function returns the results, and never changes the original shapes.
+所有形状（基本图元或运算结果）均可进行变换，例如缩放或旋转。在任何情况下，函数均返回变换后的结果，且不会修改原始形状。
 
 **Example**  
 ```js

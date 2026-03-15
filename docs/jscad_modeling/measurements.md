@@ -1,7 +1,7 @@
 
 ## modeling/measurements
 
-All shapes (primitives or the results of operations) can be measured, e.g. calculate volume, etc.
+所有形状（基本图元或运算结果）均可进行测量，例如计算体积等。
 
 **Example**  
 ```js
@@ -25,8 +25,8 @@ const { measureArea, measureBoundingBox, measureVolume } = require('@jscad/model
 
 ### modeling/measurements.measureAggregateArea(...geometries)
 
-Measure the total (aggregate) area for the given geometries.
-Note: This measurement will not account for overlapping geometry
+测量给定几何体的总面积（合计面积）。
+注意：此测量不会计算重叠部分的几何体。
 
 **Kind**: static method of [`modeling/measurements`]  
 **Returns**: `Number` - the total surface area for the group of geometry.  
@@ -74,8 +74,8 @@ let groupEpsilon = measureAggregateEpsilon(sphere(),cube())
 
 ### modeling/measurements.measureAggregateVolume(...geometries)
 
-Measure the total (aggregate) volume for the given geometries.
-Note: This measurement will not account for overlapping geometry
+测量给定几何体的总体积。
+注意：此测量不会考虑重叠的几何体。
 
 **Kind**: static method of [`modeling/measurements`]  
 **Returns**: `Number` - the volume for the group of geometry.  

@@ -1,15 +1,15 @@
 ## Modules
 Module | Description
 ------ | -----------
-[modeling/curves/bezier] | Represents a bezier easing function.
-[modeling/curves] | Curves are n-dimensional mathematical constructs that define a path from point 0 to point 1.
+[modeling/curves/bezier] | 表示一个贝塞尔缓动函数。
+[modeling/curves] | 曲线是n 维数学结构，用于定义从点 0 到点 1 的一条路径。
 
 ## Functions
 
 Name | Description
 ------ | -----------
-[lengths(segments, bezier)] | Divides the bezier curve into line segments and returns the cumulative length of those segments as an array. Utility function used to calculate the curve's approximate length and determine the equivalence between arc length and time.
-[distanceBetween(a, b)] | Calculates the Euclidean distance between two n-dimensional points.
+[lengths(segments, bezier)] | 将贝塞尔曲线分割为若干线段，并以数组形式返回这些线段的累计长度。这是一个工具函数，用于计算曲线的近似长度，并确定弧长与时间之间的对应关系。
+[distanceBetween(a, b)] | 计算两个 n 维点 之间的欧几里得距离。
 
 ## Typedefs
 

@@ -1,8 +1,7 @@
 
 ## modeling/expansions
 
-All shapes (primitives or the results of operations) can be expanded (or contracted.)
-In all cases, the function returns the results, and never changes the original shapes.
+所有形状（基本几何体或运算结果）都可以进行扩展（或收缩）。在所有情况下，函数均返回运算结果，不会修改原始形状。
 
 **Example**  
 ```js
@@ -16,10 +15,11 @@ const { expand, offset } = require('@jscad/modeling').expansions
 
 ### modeling/expansions.expand(options, ...objects)
 
-Expand the given geometry using the given options.
-Both internal and external space is expanded for 2D and 3D shapes.
+使用指定参数扩展给定的几何图形。
+对于二维和三维形状，其内部和外部空间都会被扩展。
 
-Note: Contract is expand using a negative delta.
+
+注意：收缩就是使用负的增量值进行扩展。
 
 **Kind**: static method of [`modeling/expansions`]  
 **Returns**: `Object` ⎮ `Array` - new geometry, or list of new geometries  
@@ -41,8 +41,7 @@ let newcuboid = expand({delta: 2, corners: 'round'}, cuboid({size: [20, 25, 5]})
 
 ### modeling/expansions.offset(options, ...objects)
 
-Create offset geometry from the given geometry using the given options.
-Offsets from internal and external space are created.
+根据指定选项，从给定几何图形创建偏移几何体。将从内部和外部空间生成偏移量。
 
 **Kind**: static method of [`modeling/expansions`]  
 **Returns**: `Object` ⎮ `Array` - new geometry, or list of new geometries  

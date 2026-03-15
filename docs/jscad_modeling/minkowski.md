@@ -17,12 +17,10 @@ Name | Description
 ## modeling/minkowski
 
 Minkowski sum operations for 3D geometries.
-
-The Minkowski sum of two shapes A and B is the set of all points that are
-the sum of a point in A and a point in B. This is useful for:
-- Offsetting/inflating shapes (using a sphere creates rounded edges)
-- Collision detection (shapes collide iff their Minkowski difference contains origin)
-- Motion planning and swept volumes
+两个形状 A 与 B 的闵可夫斯基和，是所有由 A 中一点与 B 中一点相加得到的点的集合。该运算常用于：
+- 形状的偏移 / 膨胀（使用球体可生成圆角边）
+- 碰撞检测（当且仅当两个形状的闵可夫斯基差包含原点时，它们发生碰撞）
+- 运动规划与扫掠体积计算
 
 **Example**  
 ```js
@@ -32,18 +30,17 @@ const rounded = minkowskiSum(cube, sphere)
 
 ### modeling/minkowski.minkowskiSum(...geometries)
 
-Compute the Minkowski sum of two 3D geometries.
+计算两个三维几何体的闵可夫斯基和。
 
-The Minkowski sum A ⊕ B is the set of all points a + b where a ∈ A and b ∈ B.
-Geometrically, this "inflates" geometry A by the shape of geometry B.
+闵可夫斯基和 A⊕B 是所有满足 a+b 的点的集合，其中 a∈A，b∈B。
+从几何上看，这相当于用几何体 B 的形状 **“膨胀”** 几何体 A。
 
 Common use cases:
 - Offset a solid by a sphere to round all edges and corners
 - Offset a solid by a cube to create chamfered edges
 - Collision detection (if Minkowski sum contains origin, shapes overlap)
 
-For best performance, use convex geometries. Non-convex geometries are supported
-when the second operand is convex, but require decomposition and are slower.
+为获得最佳性能，请使用凸几何体。当第二个操作数是凸几何体时，也支持非凸几何体，但需要进行分解处理，速度会更慢。
 
 **Kind**: static method of [`modeling/minkowski`]  
 **Returns**: `geom3` - new 3D geometry representing the Minkowski sum  

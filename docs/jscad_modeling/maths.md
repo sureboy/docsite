@@ -1,8 +1,8 @@
 ## Modules
 Module | Description
 ------ | -----------
-[modeling/maths] | Maths are computational units for fundamental Euclidean geometry. All maths operate upon array data structures. Note: Maths data structures are considered immutable, so never change the contents directly.
-[modeling/maths/line2] | Represents a unbounded line in 2D space, positioned at a point of origin.
+[modeling/maths] | 数学运算是基础欧几里得几何的计算单元。所有数学运算均基于数组数据结构进行。注意：数学数据结构被视为不可变，因此请勿直接修改其内容。
+[modeling/maths/line2] | 表示二维空间中一条无界直线，其位置由一个原点确定。
 [modeling/maths/line3] | Represents a unbounded line in 3D space, positioned at a point of origin.
 [modeling/maths/mat4] | Represents a 4x4 matrix which is column-major (when typed out it looks row-major).
 [modeling/maths/plane] | Represents a plane in 3D coordinate space as determined by a normal (perpendicular to the plane) and distance from 0,0,0.
@@ -32,8 +32,8 @@ Name | Description
 
 ## modeling/maths
 
-Maths are computational units for fundamental Euclidean geometry. All maths operate upon array data structures.
-Note: Maths data structures are considered immutable, so never change the contents directly.
+数学模块是基础欧几里得几何的计算单元。所有数学操作均基于数组数据结构执行。
+注意：数学相关的数据结构被视为不可变，因此请勿直接修改其内容。
 
 **See**: Most computations are based upon the glMatrix library (glmatrix.net)  
 **Example**  

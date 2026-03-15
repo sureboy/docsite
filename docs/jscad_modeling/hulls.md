@@ -1,9 +1,9 @@
 
 ## modeling/hulls
 
-All shapes (primitives or the results of operations) can be passed to hull functions
-to determine the convex hull of all points.
-In all cases, the function returns the results, and never changes the original shapes.
+所有形状（基本图元或运算结果）都可以传入凸包函数，
+以计算所有点的凸包。
+在任何情况下，该函数只返回结果，不会修改原始形状。
 
 **Example**  
 ```js
@@ -19,8 +19,7 @@ const { hull, hullChain, hullPoints2, hullPoints3 } = require('@jscad/modeling')
 
 ### modeling/hulls.hull(...geometries)
 
-Create a convex hull of the given geometries.
-The given geometries should be of the same type, either geom2 or geom3 or path2.
+为给定的几何体创建凸包。给定的几何体必须为同一类型，即 geom2、geom3 或 path2 中的一种。
 
 **Kind**: static method of [`modeling/hulls`]  
 **Returns**: `geom2` ⎮ `geom3` - new geometry  
@@ -50,9 +49,7 @@ let myshape = hull(rectangle({center: [-5,-5]}), ellipse({center: [5,5]}))
 
 ### modeling/hulls.hullChain(...geometries)
 
-Create a chain of hulled geometries from the given geometries.
-Essentially hull A+B, B+C, C+D, etc., then union the results.
-The given geometries should be of the same type, either geom2 or geom3 or path2.
+从给定几何体创建链式凸包几何体。本质是依次计算 A+B、B+C、C+D 等的凸包，然后将结果合并。传入的几何体必须为同一类型，即 geom2、geom3 或 path2。
 
 **Kind**: static method of [`modeling/hulls`]  
 **Returns**: `geom2` ⎮ `geom3` - new geometry  

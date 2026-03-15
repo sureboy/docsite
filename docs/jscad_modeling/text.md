@@ -1,7 +1,7 @@
 ## Modules
 Module | Description
 ------ | -----------
-[modeling/text] | Texts provide sets of segments for each character or text strings. The segments can be used to create outlines for both 2D and 3D geometry. Note: Only ASCII characters are supported.
+[modeling/text] | 文本为每个字符或字符串提供线段集合。这些线段可用于为二维和三维几何图形创建轮廓。注意：仅支持 ASCII 字符。
 
 ## Typedefs
 
@@ -12,9 +12,7 @@ Name | Description
 
 ## modeling/text
 
-Texts provide sets of segments for each character or text strings.
-The segments can be used to create outlines for both 2D and 3D geometry.
-Note: Only ASCII characters are supported.
+文本为每个字符或字符串提供线段集合。这些线段可用于为二维和三维几何图形创建轮廓。注意：仅支持 ASCII 字符。
 
 **Example**  
 ```js
@@ -28,8 +26,7 @@ const { vectorChar, vectorText } = require('@jscad/modeling').text
 
 ### modeling/text.vectorChar(\[options\], \[char\])
 
-Construct a [VectorCharObject] from a ascii character whose code is between 31 and 127,
-if the character is not supported it is replaced by a question mark.
+从ASCII 字符（编码范围 31 至 127） 构造一个 [VectorCharObject]（矢量字符对象）；若该字符不被支持，则会替换为问号。
 
 **Kind**: static method of [`modeling/text`]  
 

@@ -1,9 +1,9 @@
 
 ## modeling/primitives
 
-Primitives provide the building blocks for complex parts.
-Each primitive is a geometrical object that can be described mathematically, and therefore precise.
-Primitives can be logically combined, transformed, extruded, etc.
+基本图元为复杂零件提供了构建基础。
+每个基本图元都是一个可通过数学方式描述的几何对象，因此具有精确性。
+基本图元可以进行逻辑组合、变换、拉伸等操作。
 
 **Example**  
 ```js
@@ -36,7 +36,7 @@ const { cube, ellipse, star } = require('@jscad/modeling').primitives
 
 ### modeling/primitives.arc(\[options\])
 
-Construct an arc in two dimensional space where all points are at the same distance from the center.
+在二维空间中构造一条圆弧，其上所有点到圆心的距离都相等。
 
 **Kind**: static method of [`modeling/primitives`]  
 **Returns**: `path2` - new 2D path  
@@ -58,7 +58,7 @@ let myshape = arc({ center: [-1, -1], radius: 2, endAngle: (TAU / 4)})
 
 ### modeling/primitives.circle(\[options\])
 
-Construct a circle in two dimensional space where all points are at the same distance from the center.
+在二维空间中构造一个圆，其上所有点到圆心的距离都相等。
 
 **Kind**: static method of [`modeling/primitives`]  
 **Returns**: `geom2` - new 2D geometry  

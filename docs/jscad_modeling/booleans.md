@@ -45,9 +45,9 @@ let myshape = intersect(cube({size: 5}), cube({size: 5, center: [3,3,3]}))
 
 ### modeling/booleans.scission(...objects)
 
-Scission (divide) the given geometry into the component pieces.
+将给定的几何图形拆解（分割）为其组成部分。
 
-NOTE: Currently only 3D geometries are supported.
+注意：目前仅支持三维几何图形。
 
 **Kind**: static method of [`modeling/booleans`]  
 **Returns**: `Array` - list of pieces from each geometry  
@@ -75,9 +75,10 @@ let pieces = scission(figure)
 
 ### modeling/booleans.subtract(...geometries)
 
-Return a new geometry representing space in the first geometry but
-not in all subsequent geometries.
-The given geometries should be of the same type, either geom2 or geom3.
+
+返回一个新的几何图形，它表示属于第一个几何图形、但不属于所有后续几何图形的空间部分。
+
+给定的几何图形应属于同一类型，要么是 geom2（二维几何），要么是 geom3（三维几何）。
 
 **Kind**: static method of [`modeling/booleans`]  
 **Returns**: `geom2` ⎮ `geom3` - a new geometry  
@@ -104,8 +105,9 @@ let myshape = subtract(cuboid({size: 5}), cuboid({size: 5, center: [3,3,3]}))
 
 ### modeling/booleans.union(...geometries)
 
-Return a new geometry representing the total space in the given geometries.
-The given geometries should be of the same type, either geom2 or geom3.
+返回一个新的几何图形，表示所有给定几何图形所占的总空间。
+
+给定的几何图形必须为同一类型，即 geom2（二维几何） 或 geom3（三维几何）。
 
 **Kind**: static method of [`modeling/booleans`]  
 **Returns**: `geom2` ⎮ `geom3` - a new geometry  

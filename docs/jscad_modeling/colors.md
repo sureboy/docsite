@@ -1,8 +1,7 @@
 
 ## modeling/colors
 
-All shapes (primitives or the results of operations) can be assigned a color (RGBA).
-In all cases, the function returns the results, and never changes the original shapes.
+所有形状（基本几何体或运算结果）都可以被指定颜色（RGBA 格式）。在所有情况下，函数均返回运算结果，且不会修改原始形状。
 
 **Example**  
 ```js
@@ -185,7 +184,7 @@ let newshape = colorize(cssColors.red, oldshape)
 
 ### modeling/colors.colorize(color, ...objects)
 
-Assign the given color to the given objects.
+将指定的颜色分配给指定的对象。
 
 **Kind**: static method of [`modeling/colors`]  
 **Returns**: `Object` ⎮ `Array` - new object, or list of new objects with an additional attribute 'color'  
@@ -221,7 +220,7 @@ let mysphere = colorize(colorNameToRgb('lightblue'), sphere())
 
 ### modeling/colors.hexToRgb(notation)
 
-Converts CSS color notations (string of hex values) to RGB values.
+将 CSS 颜色表示法（十六进制值字符串）转换为 RGB 数值。
 
 **Kind**: static method of [`modeling/colors`]  
 **Returns**: `Array` - RGB color values  
@@ -255,7 +254,7 @@ let mysphere = colorize(hslToRgb([0.9166666666666666, 1, 0.5]), sphere())
 
 ### modeling/colors.hsvToRgb(...values)
 
-Converts HSV color values to RGB color values.
+将HSV 颜色值转换为 RGB 颜色值。
 
 **Kind**: static method of [`modeling/colors`]  
 **Returns**: `Array` - RGB or RGBA color values  
@@ -272,7 +271,7 @@ let mysphere = colorize(hsvToRgb([0.9166666666666666, 1, 1]), sphere())
 
 ### modeling/colors.hueToColorComponent(p, q, t)
 
-Convert hue values to a color component (ie one of r, g, b)
+将色相值转换为一个颜色分量（即 R、G、B 中的一个）。
 
 **Kind**: static method of [`modeling/colors`]  
 **Returns**: `Number` - color component  
@@ -286,7 +285,7 @@ Convert hue values to a color component (ie one of r, g, b)
 
 ### modeling/colors.rgbToHex(...values)
 
-Convert the given RGB color values to CSS color notation (string)
+将给定的 RGB 颜色值 转换为 CSS 颜色表示法（字符串形式）。
 
 **Kind**: static method of [`modeling/colors`]  
 **Returns**: `String` - CSS color notation  
