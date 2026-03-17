@@ -1,5 +1,6 @@
 ---
 slug: /
+sidebar_position: 1
 title: SolidJSCAD 简介
 description: SolidJSCAD 是一个基于 JSCAD 和 Three.js 的在线 3D 建模编辑器，支持 PWA 离线使用，并提供 VSCode 插件。
 ---
