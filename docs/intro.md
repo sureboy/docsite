@@ -72,7 +72,6 @@ solidJSCAD 是一个面向现代 Web 开发者的参数化 3D 建模平台与工
     -   **预览区**：实时渲染模型。
     -   **控制台**：显示输出日志与错误信息。
 3.  **代码编写**：
-    -   核心建模函数必须导出名为 `main` 的函数，该函数返回一个几何体对象或几何体数组。
     -   示例代码：
 ```javascript
 import modeling from '@jscad/modeling';
