@@ -10,10 +10,7 @@ Defined in: manifold-3d/manifold.d.ts:1229
 
 **`Internal`**
 
-An alternative to Mesh for output suitable for pushing into graphics
-libraries directly. This may not be manifold since the verts are duplicated
-along property boundaries that do not match. The additional merge vectors
-store this missing information, allowing the manifold to be reconstructed.
+它是 Mesh 的一种替代方案，适用于输出场景，可直接传入图形库使用。由于顶点会在属性不匹配的边界处被复制拆分，因此该结构不一定是流形。额外存储的合并向量保留了这些丢失的信息，使得流形结构能够被重建。
 
 ## See
 

@@ -33,8 +33,7 @@ Determine the result of the [setMinCircularAngle](../functions/setMinCircularAng
 
 `number`
 
-For a given radius of circle, determine how many default
-segments there will be.
+针对指定的圆半径，确定其将使用的默认分段数量。
 
 #### Returns
 

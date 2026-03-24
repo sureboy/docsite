@@ -10,7 +10,7 @@
 
 Defined in: manifold-3d/manifold-global-types.d.ts:95
 
-A three dimensional box, aligned to the coordinate system.
+与坐标系对齐的三维长方体。
 
 ## See
 

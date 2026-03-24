@@ -8,10 +8,7 @@
 
 Defined in: manifold-3d/manifold.d.ts:32
 
-Two-dimensional cross sections guaranteed to be without self-intersections,
-or overlaps between polygons (from construction onwards). This class makes
-use of the Clipper2 library for polygon clipping (boolean) and offsetting
-operations.
+二维横截面，确保从构建开始就不存在自相交以及多边形之间的重叠。该类使用 Clipper2 库来实现多边形裁剪（布尔运算）与偏移操作。
 
 ## See
 

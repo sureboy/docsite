@@ -8,28 +8,14 @@
 
 Defined in: manifold-3d/manifold-encapsulated-types.d.ts:465
 
-This library's internal representation of an oriented, 2-manifold, triangle
-mesh - a simple boundary-representation of a solid object. Use this class to
-store and operate on solids, and use MeshGL for input and output, or
-potentially Mesh if only basic geometry is required.
 
-In addition to storing geometric data, a Manifold can also store an arbitrary
-number of vertex properties. These could be anything, e.g. normals, UV
-coordinates, colors, etc, but this library is completely agnostic. All
-properties are merely float values indexed by channel number. It is up to the
-user to associate channel numbers with meaning.
+本库对**有向二维流形三角网格**的内部表示——一种用于实体对象的简易边界表示法。使用此类来存储实体并对其进行操作；输入输出可使用 **MeshGL**，若仅需基础几何功能，也可选用 **Mesh**。
 
-Manifold allows vertex properties to be shared for efficient storage, or to
-have multiple property verts associated with a single geometric vertex,
-allowing sudden property changes, e.g. at Boolean intersections, without
-sacrificing manifoldness.
+除几何数据外，**Manifold（流形）** 还可存储任意数量的顶点属性。这些属性可以是任意类型，例如法向量、UV 坐标、颜色等，但本库对此不做任何语义限定。所有属性均为按通道编号索引的浮点数值，通道编号与具体含义的对应关系由用户自行定义。
 
-Manifolds also keep track of their relationships to their inputs, via
-OriginalIDs and the faceIDs and transforms accessible through MeshGL. This
-allows object-level properties to be re-associated with the output after many
-operations, particularly useful for materials. Since separate object's
-properties are not mixed, there is no requirement that channels have
-consistent meaning between different inputs.
+Manifold 支持**共享顶点属性**以实现高效存储，也允许单个几何顶点关联多个属性顶点，从而在布尔运算相交处等场景下实现属性突变，且不会破坏流形特性。
+
+流形还会通过 **OriginalID（原始ID）** 以及可经由 MeshGL 获取的 **faceID（面ID）** 和变换信息，记录其与输入数据之间的关联关系。这使得对象级属性在经过多次运算后仍能重新关联到输出结果，对材质处理尤为实用。由于不同对象的属性不会混合，因此无需保证各输入之间的通道含义保持一致。
 
 ## See
 
