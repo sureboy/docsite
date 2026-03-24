@@ -1,3 +1,7 @@
+---
+title: manifold-global-types
+---
+
 [**manifold-3d**](../README.md)
 
 ***

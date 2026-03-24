@@ -1,3 +1,8 @@
+---
+title: manifold-encapsulated-types
+---
+
+
 [**manifold-3d**](../README.md)
 
 ***

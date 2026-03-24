@@ -24,7 +24,7 @@ const config: Config = {
   // If you aren't using GitHub pages, you don't need these.
   //organizationName: 'facebook', // Usually your GitHub org/user name.
   //projectName: 'solidJSCAD', // Usually your repo name.
-
+  onBrokenAnchors: 'ignore',
   onBrokenLinks: 'throw',
 
   // Even if you don't use internationalization, you can use this field to set

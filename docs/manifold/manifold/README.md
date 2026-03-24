@@ -1,3 +1,8 @@
+---
+sidebar_position: 4
+title: manifold-3d 
+---
+
 [**manifold-3d**](../README.md)
 
 ***
