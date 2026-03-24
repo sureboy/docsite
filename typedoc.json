@@ -1,0 +1,19 @@
+{ 
+   // "tsconfig": "./tsconfig.docs.json",
+  "entryPoints": ["./manifold-3d/manifold.d.ts",
+   //   "./node_modules/manifold-3d/manifold.d.ts"
+  "./manifold-3d/manifold-encapsulated-types.d.ts",
+  "./manifold-3d/manifold-global-types.d.ts"
+  ], // 你的Manifold类型文件路径
+  "out": "./docs/manifold", // 生成的Markdown输出目录
+  "plugin": ["typedoc-plugin-markdown"], // 启用Markdown插件
+ 
+  "excludePrivate": true, // 排除私有成员
+  "excludeProtected": true, // 排除受保护成员
+  "readme": "none", // 不生成默认README（避免覆盖）   
+ 
+ 
+  "excludeExternals": true,
+  "skipErrorChecking": true,  
+  "entryPointStrategy": "resolve"
+}

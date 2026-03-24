@@ -1,0 +1,14 @@
+// tsconfig.docs.json
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "types": []
+  },
+  "include": [
+    "node_modules/manifold-3d/**/*.d.ts"
+  ],
+  "exclude": [
+    "node_modules/**/*.d.ts"
+  ]
+}
