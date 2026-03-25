@@ -48,8 +48,8 @@ const { cube, ellipse, star } = require('@jscad/modeling').primitives
 | \[options.radius\] | `Number` | `1` | radius of arc |
 | \[options.startAngle\] | `Number` | `0` | starting angle of the arc, in radians |
 | \[options.endAngle\] | `Number` | `TAU` | ending angle of the arc, in radians |
-| \[options.segments\] | `Number` | `32` | number of segments to create per full rotation |
-| \[options.makeTangent\] | `Boolean` | `false` | adds line segments at both ends of the arc to ensure that the gradients at the edges are tangent |
+| \[options.segments\] | `Number` | `32` | 每完整旋转一圈所创建的段数 |
+| \[options.makeTangent\] | `Boolean` | `false` | 在圆弧的两端添加线段，以确保边缘处的渐变方向相切。 |
 
 **Example**  
 ```js
