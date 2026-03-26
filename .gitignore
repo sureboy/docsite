@@ -3,6 +3,7 @@
 
 # Production
 /build
+/manifold3d_python
 
 # Generated files
 .docusaurus

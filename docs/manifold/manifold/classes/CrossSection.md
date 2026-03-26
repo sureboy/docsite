@@ -23,9 +23,7 @@ Defined in: manifold-3d/manifold.d.ts:32
 
 Defined in: manifold-3d/manifold.d.ts:300
 
-This operation returns a vector of CrossSections that are topologically
-disconnected, each containing one outline contour with zero or more
-holes.
+该操作返回一个截面（CrossSection）向量，这些截面在拓扑上彼此不连通，每个截面包含一条外轮廓线以及零个或多个内孔。
 
 #### Returns
 
@@ -39,7 +37,7 @@ holes.
 
 Defined in: manifold-3d/manifold.d.ts:68
 
-Constructs a circle of a given radius.
+构造一个具有给定半径的圆。
 
 #### Parameters
 
@@ -47,14 +45,13 @@ Constructs a circle of a given radius.
 
 `number`
 
-Radius of the circle. Must be positive.
+圆的半径。必须为正数。
 
 ##### circularSegments?
 
 `number`
 
-Number of segments along its diameter. Default is
-calculated by the static Quality defaults according to the radius.
+沿直径方向的分段数量。默认值由静态质量默认参数根据半径计算得出。
 
 #### Returns
 
@@ -68,9 +65,7 @@ calculated by the static Quality defaults according to the radius.
 
 Defined in: manifold-3d/manifold.d.ts:58
 
-Constructs a square with the given XY dimensions. By default it is
-positioned in the first quadrant, touching the origin. If any dimensions in
-size are negative, or if all are zero, an empty Manifold will be returned.
+根据给定的XY尺寸构建一个正方形。默认情况下，它位于第一象限并与原点相切。如果尺寸中的任意值为负数，或所有值均为零，则将返回一个空的流形（Manifold）对象。
 
 #### Parameters
 
@@ -78,13 +73,13 @@ size are negative, or if all are zero, an empty Manifold will be returned.
 
 `number` \| readonly \[`number`, `number`\]
 
-The X, and Y dimensions of the square.
+正方形的 **X 轴和 Y 轴尺寸**。
 
 ##### center?
 
 `boolean`
 
-Set to true to shift the center to the origin.
+设为 `true` 可将中心移至原点。
 
 #### Returns
 
@@ -98,10 +93,8 @@ Set to true to shift the center to the origin.
 
 Defined in: manifold-3d/manifold.d.ts:45
 
-Create a 2d cross-section from a set of contours (complex polygons). A
-boolean union operation (with Positive filling rule by default) is
-performed to combine overlapping polygons and ensure the resulting
-CrossSection is free of intersections.
+根据一组轮廓线（复杂多边形）创建二维截面。
+系统将执行布尔并集运算（默认采用**正向填充规则**），以合并重叠的多边形，并确保最终生成的截面无相交情况。
 
 #### Parameters
 
@@ -109,15 +102,13 @@ CrossSection is free of intersections.
 
 [`Polygons`](../type-aliases/Polygons.md)
 
-A set of closed paths describing zero or more complex
-polygons.
+一组闭合路径，用于描述零个或多个复杂多边形。
 
 ##### fillRule?
 
 [`FillRule`](../type-aliases/FillRule.md)
 
-The filling rule used to interpret polygon sub-regions in
-contours.
+用于解析轮廓中多边形子区域的**填充规则**。
 
 #### Returns
 
@@ -131,8 +122,7 @@ contours.
 
 Defined in: manifold-3d/manifold.d.ts:365
 
-Frees the WASM memory of this CrossSection, since these cannot be
-garbage-collected automatically.
+释放此截面（CrossSection）的WASM内存，因其无法被自动垃圾回收。
 
 #### Returns
 
@@ -206,8 +196,7 @@ Boolean difference
 
 Defined in: manifold-3d/manifold.d.ts:292
 
-Construct a CrossSection from a vector of other Polygons (batch
-boolean union).
+基于一组其他多边形向量构建截面（批量布尔并集运算）。
 
 #### Parameters
 
@@ -229,7 +218,7 @@ readonly (`CrossSection` \| [`Polygons`](../type-aliases/Polygons.md))[]
 
 Defined in: manifold-3d/manifold.d.ts:243
 
-Boolean difference of the cross-section b from the cross-section a
+截面 **b** 相对于截面 **a** 的**布尔差集**
 
 ##### Parameters
 
@@ -251,7 +240,7 @@ Boolean difference of the cross-section b from the cross-section a
 
 Defined in: manifold-3d/manifold.d.ts:263
 
-Boolean difference of the tail of a list of cross-sections from its head
+截面列表中，**头部截面与尾部所有截面的布尔差集**
 
 ##### Parameters
 
@@ -273,7 +262,7 @@ readonly (`CrossSection` \| [`Polygons`](../type-aliases/Polygons.md))[]
 
 Defined in: manifold-3d/manifold.d.ts:250
 
-Boolean intersection of the cross-sections a and b
+截面 **a** 与 **b** 的**布尔交集**
 
 ##### Parameters
 
@@ -295,7 +284,7 @@ Boolean intersection of the cross-sections a and b
 
 Defined in: manifold-3d/manifold.d.ts:268
 
-Boolean intersection of a list of cross-sections
+一组截面的**布尔交集**
 
 ##### Parameters
 
@@ -317,7 +306,7 @@ readonly (`CrossSection` \| [`Polygons`](../type-aliases/Polygons.md))[]
 
 Defined in: manifold-3d/manifold.d.ts:236
 
-Boolean union of the cross-sections a and b
+截面 **a** 与 **b** 的**布尔并集**
 
 ##### Parameters
 
@@ -479,10 +468,8 @@ Return the contours of this CrossSection as a list of simple polygons.
 
 Defined in: manifold-3d/manifold.d.ts:316
 
-Create a 2d cross-section from a set of contours (complex polygons). A
-boolean union operation (with Positive filling rule by default) is
-performed to combine overlapping polygons and ensure the resulting
-CrossSection is free of intersections.
+根据一组轮廓线（复杂多边形）创建二维截面。
+程序会执行布尔并集运算（默认采用**正向填充规则**），合并重叠的多边形，并确保最终生成的截面无自相交问题。
 
 #### Parameters
 
@@ -490,15 +477,13 @@ CrossSection is free of intersections.
 
 [`Polygons`](../type-aliases/Polygons.md)
 
-A set of closed paths describing zero or more complex
-polygons.
+一组闭合路径，用于描述**零个或多个复杂多边形**。
 
 ##### fillRule?
 
 [`FillRule`](../type-aliases/FillRule.md)
 
-The filling rule used to interpret polygon sub-regions in
-contours.
+用于解析轮廓中多边形子区域的**填充规则**。
 
 #### Returns
 
@@ -526,32 +511,30 @@ Z-extent of extrusion.
 
 `number`
 
-Number of extra copies of the crossSection to insert into
-the shape vertically; especially useful in combination with twistDegrees to
-avoid interpolation artifacts. Default is none.
+需沿竖直方向向几何体中插入的截面额外副本数量；
+在与扭转角度配合使用时尤为实用，可避免插值失真。
+默认无额外副本。
 
 ##### twistDegrees?
 
 `number`
 
-Amount to twist the top crossSection relative to the
-bottom, interpolated linearly for the divisions in between.
+顶部截面相对于底部截面的**扭转角度**，中间各分段将进行线性插值。
 
 ##### scaleTop?
 
 `number` \| readonly \[`number`, `number`\]
 
-Amount to scale the top (independently in X and Y). If the
-scale is {0, 0}, a pure cone is formed with only a single vertex at the
-top. Default {1, 1}.
+顶部的缩放比例（**X、Y方向独立缩放**）。
+若缩放值为 `{0, 0}`，则会形成顶部仅有单个顶点的标准锥体。
+默认值为 `{1, 1}`。
 
 ##### center?
 
 `boolean`
 
-If true, the extrusion is centered on the z-axis through the
-    origin
-as opposed to resting on the XY plane as is default.
+若为 `true`，挤出体将以**穿过原点的Z轴为中心**，
+而非默认的放置在XY平面上。
 
 #### Returns
 
@@ -565,10 +548,9 @@ as opposed to resting on the XY plane as is default.
 
 Defined in: manifold-3d/manifold.d.ts:155
 
-Mirror this CrossSection over the arbitrary axis described by the unit form
-of the given vector. If the length of the vector is zero, an empty
-CrossSection is returned. This operation can be chained. Transforms are
-combined and applied lazily.
+沿给定向量的单位向量所表示的任意轴对该截面进行**镜像**。
+若向量长度为零，则返回一个空截面。
+该操作可链式调用。变换会被合并并延迟执行。
 
 #### Parameters
 
@@ -590,8 +572,7 @@ the axis to be mirrored over
 
 Defined in: manifold-3d/manifold.d.ts:189
 
-Inflate the contours in CrossSection by the specified delta, handling
-corners according to the given JoinType.
+按照指定的偏移量对截面中的轮廓进行**膨胀**处理，并根据给定的**连接类型**处理拐角。
 
 #### Parameters
 
@@ -599,36 +580,28 @@ corners according to the given JoinType.
 
 `number`
 
-Positive deltas will cause the expansion of outlining contours
-to expand, and retraction of inner (hole) contours. Negative deltas will
-have the opposite effect.
+正值偏移量会使**外轮廓膨胀**，同时使**内部孔轮廓收缩**。
+负值偏移量则会产生相反的效果。
 
 ##### joinType?
 
 [`JoinType`](../type-aliases/JoinType.md)
 
-The join type specifying the treatment of contour joins
-(corners). Defaults to Round
+指定轮廓连接处（拐角）处理方式的**连接类型**，默认为**圆角**。
 
 ##### miterLimit?
 
 `number`
 
-The maximum distance in multiples of delta that vertices
-can be offset from their original positions with before squaring is
-applied, **when the join type is Miter** (default is 2, which is the
-minimum allowed). See the [Clipper2
-MiterLimit](http://www.angusj.com/clipper2/Docs/Units/Clipper.Offset/Classes/ClipperOffset/Properties/MiterLimit.htm)
-page for a visual example.
+当**连接类型为斜接（Miter）**时，该值表示顶点在进行直角化处理前，可从原始位置偏移的最大距离（以偏移量 delta 的倍数计）。
+默认值为 2，同时也是允许的最小值。
+直观示例可参见 [Clipper2 斜接限制](http://www.angusj.com/clipper2/Docs/Units/Clipper.Offset/Classes/ClipperOffset/Properties/MiterLimit.htm) 页面。
 
 ##### circularSegments?
 
 `number`
 
-Number of segments per 360 degrees of
-*JoinType::Round* corners (roughly, the number of vertices that
-will be added to each contour). Default is calculated by the static Quality
-defaults according to the radius.
+*JoinType::Round* 圆角每旋转360度对应的分段数量（大致为每个轮廓上新增的顶点数量）。默认值由静态质量默认设置根据半径自动计算。
 
 #### Returns
 
@@ -642,10 +615,10 @@ defaults according to the radius.
 
 Defined in: manifold-3d/manifold.d.ts:103
 
-Constructs a manifold by revolving this cross-section around its Y-axis and
-then setting this as the Z-axis of the resulting manifold. If the contours
-cross the Y-axis, only the part on the positive X side is used.
-Geometrically valid input will result in geometrically valid output.
+将此截面绕其 **Y 轴** 旋转生成流形，
+并将该旋转轴设为最终流形的 **Z 轴**。
+若轮廓跨越 Y 轴，则仅使用 **X 轴正方向** 的部分。
+几何合法的输入将得到几何合法的输出。
 
 #### Parameters
 
@@ -653,8 +626,7 @@ Geometrically valid input will result in geometrically valid output.
 
 `number`
 
-Number of segments along its diameter. Default is
-calculated by the static Defaults.
+沿直径方向的分段数量。默认值由静态默认参数计算得出。
 
 ##### revolveDegrees?
 
@@ -672,8 +644,7 @@ calculated by the static Defaults.
 
 Defined in: manifold-3d/manifold.d.ts:134
 
-Applies a (Z-axis) rotation to the CrossSection, in degrees. This operation
-can be chained. Transforms are combined and applied lazily.
+对截面施加（绕Z轴）旋转，单位为**度**。该操作可链式调用，多个变换会被合并并延迟执行。
 
 #### Parameters
 
@@ -695,8 +666,7 @@ degrees about the Z-axis to rotate.
 
 Defined in: manifold-3d/manifold.d.ts:143
 
-Scale this CrossSection in space. This operation can be chained. Transforms
-are combined and applied lazily.
+对该截面在空间中进行**缩放**。此操作可链式调用，多个变换会被合并并延迟执行。
 
 #### Parameters
 
@@ -718,16 +688,12 @@ The vector to multiply every vertex by per component.
 
 Defined in: manifold-3d/manifold.d.ts:210
 
-Remove vertices from the contours in this CrossSection that are less than
-the specified distance epsilon from an imaginary line that passes through
-its two adjacent vertices. Near duplicate vertices and collinear points
-will be removed at lower epsilons, with elimination of line segments
-becoming increasingly aggressive with larger epsilons.
 
-It is recommended to apply this function following Offset, in order to
-clean up any spurious tiny line segments introduced that do not improve
-quality in any meaningful way. This is particularly important if further
-offseting operations are to be performed, which would compound the issue.
+移除该截面轮廓中，与穿过其两个相邻顶点的假想直线距离小于指定阈值 **epsilon** 的顶点。
+在较小的 epsilon 阈值下，邻近的重复顶点与共线点将被移除；epsilon 越大，线段剔除效果会越显著。
+
+建议在执行**偏移**操作后调用此函数，以清理那些不会有效提升模型质量、却被额外生成的微小杂散线段。
+若后续还需进行多次偏移操作，这一步尤为关键，否则问题会不断累积放大。
 
 #### Parameters
 
@@ -735,9 +701,7 @@ offseting operations are to be performed, which would compound the issue.
 
 `number`
 
-minimum distance vertices must diverge from the hypothetical
-    outline without them in order to be included in the output (default
-    1e-6)
+顶点必须与**不包含该顶点时的假想轮廓**偏离至少此最小距离，才会被保留在输出结果中（默认值为 1e-6）。
 
 #### Returns
 
@@ -751,8 +715,8 @@ minimum distance vertices must diverge from the hypothetical
 
 Defined in: manifold-3d/manifold.d.ts:115
 
-Transform this CrossSection in space. Stored in column-major order. This
-operation can be chained. Transforms are combined and applied lazily.
+对该截面执行**空间变换**。变换矩阵以**列优先**顺序存储。
+该操作可链式调用，多个变换会被合并并延迟执行。
 
 #### Parameters
 
@@ -760,8 +724,7 @@ operation can be chained. Transforms are combined and applied lazily.
 
 [`Mat3`](../type-aliases/Mat3.md)
 
-The affine transformation matrix to apply to all the vertices. The
-    last row is ignored.
+应用于所有顶点的**仿射变换矩阵**，**最后一行将被忽略**。
 
 #### Returns
 
@@ -777,8 +740,7 @@ The affine transformation matrix to apply to all the vertices. The
 
 Defined in: manifold-3d/manifold.d.ts:124
 
-Move this CrossSection in space. This operation can be chained. Transforms
-are combined and applied lazily.
+对该截面执行**空间平移**。此操作可链式调用，多个变换会被合并并延迟执行。
 
 ##### Parameters
 
@@ -798,8 +760,7 @@ The vector to add to every vertex.
 
 Defined in: manifold-3d/manifold.d.ts:125
 
-Move this CrossSection in space. This operation can be chained. Transforms
-are combined and applied lazily.
+对该截面进行**空间平移**。该操作支持链式调用，多个变换会被合并并延迟执行。
 
 ##### Parameters
 
@@ -823,10 +784,7 @@ are combined and applied lazily.
 
 Defined in: manifold-3d/manifold.d.ts:166
 
-Move the vertices of this CrossSection (creating a new one) according to
-any arbitrary input function, followed by a union operation (with a
-Positive fill rule) that ensures any introduced intersections are not
-included in the result.
+根据任意输入函数移动此截面的顶点（并创建一个新截面），随后执行**并集运算**（采用**正向填充规则**），以确保结果中不包含运算引入的任何相交部分。
 
 #### Parameters
 
@@ -834,7 +792,7 @@ included in the result.
 
 (`vert`) => `void`
 
-A function that modifies a given vertex position.
+一个用于修改给定顶点位置的函数。
 
 #### Returns
 
