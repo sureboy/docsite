@@ -1,18 +1,32 @@
-import manifold3d
+import manifold3d as manifold
 import trimesh
+import numpy as np
 
-# 创建模型
-a = manifold3d.Manifold.cube([3,3,3])
-b = manifold3d.Manifold.sphere(radius=2)
+def manifold_to_trimesh(manifold_obj):
+    """Convert a Manifold object to a trimesh object"""
+    mesh_data = manifold_obj.to_mesh()
+    vertices = np.array(mesh_data.vert_properties)
+    faces = np.array(mesh_data.tri_verts)
+    return trimesh.Trimesh(vertices=vertices, faces=faces)
 
-# 运算
-res = a - b  # 挖洞
+# Create shapes
+cube = manifold.Manifold.cube([2, 2, 2])
+sphere = manifold.Manifold.sphere(1.2, circular_segments=64)
 
-vertices = res.vertices  # 正确！不是 vert
-faces = res.faces        # 正确！不是 face
+# Position sphere
+sphere = sphere.translate([1, 0.5, 0])
 
-# 转 trimesh 并导出
-trimesh.Trimesh(vertices=vertices, faces=faces).export("test.stl")
+# Boolean operations
+union = cube + sphere
+difference = cube - sphere
+intersection = cube ^ sphere
 
-# 可选：直接预览
-# trimesh.Trimesh(vertices=mesh.vert, faces=mesh.face).show()
+# Convert and export
+mesh_union = manifold_to_trimesh(union)
+mesh_union.export('union.stl')
+
+mesh_diff = manifold_to_trimesh(difference)
+mesh_diff.export('difference.stl')
+
+print(f"Union: {len(mesh_union.vertices)} vertices, {len(mesh_union.faces)} faces")
+print(f"Difference: {len(mesh_diff.vertices)} vertices, {len(mesh_diff.faces)} faces")
