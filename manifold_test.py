@@ -22,7 +22,7 @@ difference = cube - sphere
 intersection = cube ^ sphere
 
 # Convert and export
-mesh_union = manifold_to_trimesh(union)
+mesh_union = manifold_to_trimesh(union) 
 mesh_union.export('union.stl')
 
 mesh_diff = manifold_to_trimesh(difference)

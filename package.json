@@ -17,6 +17,7 @@
     "docs:generate": "npx typedoc"
   },
   "dependencies": {
+    "@coffeecup_tech/docusaurus-plugin-structured-data": "^1.0.2",
     "@docusaurus/babel": "^3.9.2",
     "@docusaurus/core": "3.9.2",
     "@docusaurus/preset-classic": "3.9.2",

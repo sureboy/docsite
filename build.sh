@@ -1,0 +1,1 @@
+npm run build && rm -r ../jscadwebsite/static/docs && cp -r ./build ../jscadwebsite/static/docs

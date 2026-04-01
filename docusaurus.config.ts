@@ -15,11 +15,11 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://docs.solidjscad.com',
+  url: 'https://solidjscad.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
-
+  baseUrl: '/docs/',
+ 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   //organizationName: 'facebook', // Usually your GitHub org/user name.
@@ -31,10 +31,31 @@ const config: Config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'zh-CN',
+    locales: ['zh-CN'],
+    localeConfigs: {
+      'zh-CN': {
+        label: '简体中文',
+        direction: 'ltr',
+        htmlLang: 'zh-CN',
+      },
+    },
   },
-
+  headTags: [  
+    {
+      tagName: 'script',
+      attributes: {
+        type: 'application/ld+json',
+      },
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        name: 'solidjscad 参数化3D建模',
+        url: 'https://solidjscad.com',
+        inLanguage: 'zh-CN',
+      }),
+    },
+  ],
   presets: [
     [
       'classic',
@@ -68,8 +89,13 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
-
   themeConfig: {
+    metadata: [
+      { name: 'keywords', content: '参数化建模, 3D建模, 在线建模, JavaScript 3D, SolidJScad, 代码生成3D, STL导出, 三维设计, 开源建模工具,技术文档,教程' },
+      { name: 'author', content: 'Zaddone' }, 
+      // 如果希望所有页面都被收录，可不加 robots meta；如果某些页面不想被收录，可单独控制
+    ],
+  
     // Replace with your project's social card
     //image: 'img/docusaurus-social-card.jpg',
     colorMode: {
