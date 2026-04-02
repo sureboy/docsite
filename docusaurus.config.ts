@@ -106,6 +106,7 @@ const config: Config = {
       logo: {
         alt: 'SolidJSCAD',
         src: 'img/favicon.png',
+        href:"https://solidjscad.com/home/"
       },
       items: [
         {
